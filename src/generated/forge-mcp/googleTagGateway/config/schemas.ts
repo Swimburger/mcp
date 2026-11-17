@@ -17,8 +17,13 @@ export const google$$tag$$gateway_google$$tag$$gateway$$config: JSONObject = {
       "description": "Specifies the endpoint path for proxying Google Tag Manager requests. Use an absolute path starting with '/', with no nested paths and alphanumeric characters only (e.g. /metrics).",
       "type": "string"
     },
+    "forwardClientIpHeaders": {
+      "description": "Forwards client IP-related headers when enabled. When disabled, client IP-related headers are stripped. If omitted, the previously stored value is kept; new configurations default to true.",
+      "type": "boolean"
+    },
     "hideOriginalIp": {
-      "description": "Hides the original client IP address from Google when enabled.",
+      "deprecated": true,
+      "description": "Deprecated. This value is stored but has no effect on traffic. Use `forwardClientIpHeaders` to control whether client IP-related headers are forwarded to Google. Optional in requests: if omitted, the previously stored value is kept. Responses always include it.",
       "type": "boolean"
     },
     "measurementId": {
@@ -40,7 +45,6 @@ export const google$$tag$$gateway_google$$tag$$gateway$$config: JSONObject = {
   "required": [
     "enabled",
     "endpoint",
-    "hideOriginalIp",
     "measurementId"
   ],
   "type": "object"

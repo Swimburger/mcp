@@ -378,7 +378,6 @@ import { tools as intel_whoisTools } from "./intel/whois/tools.js";
 import { tools as ipsTools } from "./ips/tools.js";
 import { tools as k2_streams_subscriptionsTools } from "./k2/streams/subscriptions/tools.js";
 import { tools as k2_streamsTools } from "./k2/streams/tools.js";
-import { tools as kv_bulkTools } from "./kv/bulk/tools.js";
 import { tools as kv_keysTools } from "./kv/keys/tools.js";
 import { tools as kv_metadataTools } from "./kv/metadata/tools.js";
 import { tools as kv_namespacesTools } from "./kv/namespaces/tools.js";
@@ -1424,7 +1423,6 @@ export const tools: readonly Tool[] = [
   ...ipsTools,
   ...k2_streamsTools,
   ...k2_streams_subscriptionsTools,
-  ...kv_bulkTools,
   ...kv_keysTools,
   ...kv_metadataTools,
   ...kv_namespacesTools,

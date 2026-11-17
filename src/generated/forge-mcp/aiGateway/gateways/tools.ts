@@ -406,6 +406,10 @@ export const tools: readonly Tool[] = [
                 }
               ]
             },
+            "multiprovider_enabled": {
+              "description": "Lets requests to a model use every provider that serves it. When off, a model uses only the providers it launched with, so a provider added later receives none of its traffic. A request that names providers (the cf-aig-allowed-providers header or routing.allowedProviders) can still use any of them. Model aliases (custom/) are not restricted.",
+              "type": "boolean"
+            },
             "otel": {
               "oneOf": [
                 {
@@ -7765,6 +7769,10 @@ export const tools: readonly Tool[] = [
                   "type": "null"
                 }
               ]
+            },
+            "multiprovider_enabled": {
+              "description": "Lets requests to a model use every provider that serves it. When off, a model uses only the providers it launched with, so a provider added later receives none of its traffic. A request that names providers (the cf-aig-allowed-providers header or routing.allowedProviders) can still use any of them. Model aliases (custom/) are not restricted.",
+              "type": "boolean"
             },
             "otel": {
               "oneOf": [

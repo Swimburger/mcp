@@ -60,15 +60,19 @@ export const google$$tag$$gateway_api$$response$$common$$failure: JSONObject = {
 };
 
 /**
- * The schema of `google-tag-gateway_google-tag-gateway-config` in responses.
+ * The schema of `google-tag-gateway_google-tag-gateway-config-response` in
+ * responses.
  */
-export const google$$tag$$gateway_google$$tag$$gateway$$config: JSONObject = {
+export const google$$tag$$gateway_google$$tag$$gateway$$config$$response: JSONObject = {
   "properties": {
     "enabled": {
       "type": "boolean"
     },
     "endpoint": {
       "type": "string"
+    },
+    "forwardClientIpHeaders": {
+      "type": "boolean"
     },
     "hideOriginalIp": {
       "type": "boolean"

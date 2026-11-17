@@ -4,10 +4,10 @@
 import type { JSONObject } from "@modelcontextprotocol/server";
 
 /**
- * The schema of `speed_automatic_platform_optimization_value`.
+ * The schema of `speed_automatic_platform_optimization_patch_value`.
  */
-export const speed_automatic_platform_optimization_value: JSONObject = {
-  "description": "Configuration for Automatic Platform Optimization (APO) for WordPress.\nSet to \"off\" to disable, or provide an object to configure APO settings.",
+export const speed_automatic_platform_optimization_patch_value: JSONObject = {
+  "description": "Configuration for Automatic Platform Optimization (APO) for WordPress.\nSet to \"off\" to disable, or provide an object to configure APO settings.\nWhen an APO configuration already exists, fields omitted from the object keep their current value.",
   "oneOf": [
     {
       "properties": {
@@ -31,7 +31,7 @@ export const speed_automatic_platform_optimization_value: JSONObject = {
           "type": "array"
         },
         "recheck": {
-          "description": "Whether to recheck WordPress and plugin detection.",
+          "description": "Whether to recheck WordPress and plugin detection. When an APO configuration already exists, an omitted `recheck` is false, not its stored value.",
           "type": "boolean"
         },
         "wordpress": {
@@ -43,12 +43,6 @@ export const speed_automatic_platform_optimization_value: JSONObject = {
           "type": "boolean"
         }
       },
-      "required": [
-        "cf",
-        "enabled",
-        "wordpress",
-        "wp_plugin"
-      ],
       "type": "object"
     },
     {
